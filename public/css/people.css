@@ -1,0 +1,20 @@
+ td {
+  padding: .5em;
+  border: 1px solid black;
+}
+
+.new-person {
+  color: cornflowerblue;
+  background-color: azure;
+  padding: 1em;
+}
+
+.edit-person {
+  color: coral;
+  background-color: bisque;
+  padding: 1em;
+}
+
+.error-msg{
+  color: red;
+}
