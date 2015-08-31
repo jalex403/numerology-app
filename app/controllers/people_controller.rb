@@ -12,7 +12,7 @@ get '/people/new' do
 end
 
 post '/people' do
-  if (params[:birthdate].include?("-") or params[:birthdate]=="")
+  if params[:birthdate].include?("-")
     birthdate = params[:birthdate]
   else
     birthdate = Date.strptime(params[:birthdate], "%m%d%Y")      
@@ -58,5 +58,6 @@ get '/people/:id' do
   birthdate_string = @person.birthdate.strftime("%m%d%Y")
   birth_path_num = Person.get_birth_path_num(birthdate_string)
   @message = Person.numerology_message(birth_path_num)
+  @imgurl = birth_path_num.to_s
   erb :"/people/show"
 end

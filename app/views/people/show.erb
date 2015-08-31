@@ -1,4 +1,5 @@
 <%= erb :"/people/_navbar" %> 
 <h1><%= "#{@person.first_name} #{@person.last_name}" %></h1>
 <p><%= "Date of birth: #{@person.birthdate.strftime('%b %d %Y')}"%></p>
-<p><%= "Numerology: #{@message}"%></p>
+<p><%= "Numerology: #{@message}" %></p>
+<img src="/images/<%= @imgurl %>.jpg " >
